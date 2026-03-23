@@ -1,0 +1,114 @@
+-- =====================================================
+-- DAX QUERIES FOR COVID-19 ANALYSIS
+-- =====================================================
+
+
+-- ================================
+-- MAX CONFIRMED CASES BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Max_Confirmed", MAX(covid_19_states_cleaned[Confirmed])
+)
+ORDER BY [Max_Confirmed] DESC
+
+
+-- ================================
+-- MAX DECEASED CASES BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Max_Deceased", MAX(covid_19_states_cleaned[Deceased])
+)
+ORDER BY [Max_Deceased] DESC
+
+
+-- ================================
+-- MAX RECOVERED CASES BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Max_Recovered", MAX(covid_19_states_cleaned[Recovered])
+)
+ORDER BY [Max_Recovered] DESC
+
+
+-- ================================
+-- MAX TESTED CASES BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Max_Tested", MAX(covid_19_states_cleaned[Tested])
+)
+ORDER BY [Max_Tested] DESC
+
+
+-- ================================
+-- RECOVERY RATE BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Recovery_Rate",
+    (SUM(covid_19_states_cleaned[Recovered]) /
+     SUM(covid_19_states_cleaned[Confirmed])) * 100
+)
+ORDER BY [Recovery_Rate] DESC
+
+
+-- ================================
+-- DEATH RATE BY STATE
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Deceased_Rate",
+    (SUM(covid_19_states_cleaned[Deceased]) /
+     SUM(covid_19_states_cleaned[Confirmed])) * 100
+)
+ORDER BY [Deceased_Rate] DESC
+
+
+-- ================================
+-- CONFIRMATION RATE (POSITIVITY RATE)
+-- ================================
+EVALUATE
+SUMMARIZE(
+    FILTER(
+        covid_19_states_cleaned,
+        covid_19_states_cleaned[State] <> "India"
+    ),
+    covid_19_states_cleaned[State],
+    "Confirm_Rate",
+    (SUM(covid_19_states_cleaned[Confirmed]) /
+     SUM(covid_19_states_cleaned[Tested])) * 100
+)
+ORDER BY [Confirm_Rate] DESC
