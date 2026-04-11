@@ -1,0 +1,124 @@
+Problems Faced now in Health Analysis.
+REAL PROBLEMS YOU ARE FACING (NOT CODING)
+1️⃣ Metric Confusion (BIGGEST ISSUE)
+What I see:
+
+You kept switching between:
+
+SUM(Confirmed)
+MAX(Confirmed)
+MAX - MIN
+
+👉 You weren’t sure what the metric actually means
+
+Real Problem:
+You are not fully clear on what each metric represents in real-world terms
+Why this matters:
+Wrong metric → wrong insight
+Wrong insight → bad analysis
+LinkedIn Question You Can Ask:
+
+👉 “How do you decide the correct metric (SUM vs MAX vs growth) when working with cumulative datasets like COVID?”
+
+2️⃣ Understanding of Data Nature (Cumulative vs Incremental)
+What I see:
+
+You didn’t initially realize:
+
+Confirmed = cumulative data
+Real Problem:
+You are not deeply analyzing how the dataset is structured before working on it
+Why this matters:
+
+Every dataset type changes:
+
+aggregation logic
+visualization logic
+interpretation
+LinkedIn Question:
+
+👉 “What are best practices to identify whether a dataset is cumulative or transactional, and how does that impact analysis?”
+
+3️⃣ Context Thinking (Power BI / DAX)
+What I see:
+
+You struggled with:
+
+Rank not working
+All values = 1
+Filters not behaving
+Real Problem:
+You are still developing intuition for filter context and evaluation context
+Why this matters:
+
+This is the core of Power BI / DAX
+
+LinkedIn Question:
+
+👉 “How do experienced analysts debug filter context issues in Power BI when measures don’t behave as expected?”
+
+4️⃣ Separation of Logic vs Visualization
+What I see:
+
+You mixed:
+
+DAX logic
+Visual filters
+Data meaning
+Real Problem:
+You are not clearly separating:
+calculation logic vs display logic
+Why this matters:
+Measure → calculates  
+Filter → controls visibility  
+Visual → presents
+LinkedIn Question:
+
+👉 “How do you structure calculations vs filters vs visuals in Power BI for complex dashboards?”
+
+5️⃣ Problem Framing (VERY IMPORTANT)
+What I see:
+
+You said:
+
+“I don’t know what questions to ask from the dataset”
+
+Real Problem:
+You are still learning how to define analytical questions
+Why this matters:
+
+This is what separates:
+
+Beginner → writes queries
+Analyst → asks the right questions
+LinkedIn Question:
+
+👉 “How do you approach defining meaningful business questions when working with a new dataset?”
+
+6️⃣ Over-Focus on Tools Instead of Insight
+What I see:
+
+You asked a lot about:
+
+SQL vs PySpark vs Supabase
+DAX syntax
+Real Problem:
+You are slightly tool-focused instead of insight-focused
+Reality:
+Tools don’t matter → insights matter
+LinkedIn Question:
+
+👉 “How do you shift from focusing on tools to focusing on insights in data analysis projects?”
+
+7️⃣ Debugging Approach (Improving but not stable yet)
+What I see:
+
+You debugged, but:
+
+Needed guidance step-by-step
+Didn’t always isolate the problem
+Real Problem:
+You are still developing structured debugging thinking
+LinkedIn Question:
+
+👉 “What is your approach to debugging data issues when results don’t match expectations?”
