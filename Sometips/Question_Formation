@@ -1,0 +1,81 @@
+How to make questions. (Framework)
+1️⃣ Start With the Objective
+
+Before asking questions, define the goal of the analysis.
+
+For your project:
+
+Goal:
+Understand the spread, recovery, and severity of COVID-19 across Indian states over time.
+
+Once you have a goal, questions naturally appear.
+
+2️⃣ Use the “Dimensions + Metrics” Method
+
+Look at your dataset columns.
+
+Your columns are something like:
+
+Date, State, Confirmed,  Recovered, Deceased, Tested
+
+Now separate them:
+
+Dimensions (categories)
+State, Date
+
+Metrics (numbers)
+Confirmed, Recovered, Deceased,Tested
+
+Now ask:
+Metric + Dimension, Example:
+Confirmed cases by state
+Confirmed cases over time
+Recovery rate by state
+
+This is how analysts generate questions.
+
+
+3️⃣ Types of Questions Analysts Ask
+
+Most analysis questions fall into five categories.
+
+1️⃣ Descriptive (What happened?)
+
+Examples:
+
+Which state has the highest confirmed cases?
+Which state has the highest deaths?
+What is the total number of cases in India?
+2️⃣ Trend Analysis (How did things change?)
+
+Examples:
+
+How did cases change over time?
+Which months had case spikes?
+Did recovery rates improve over time?
+3️⃣ Comparison
+
+Examples:
+
+Which states handled COVID better or worse?
+Which states had the highest recovery rates?
+Which states had highest death rates?
+4️⃣ Ratios / Derived Metrics
+
+Create new metrics.
+
+Example:
+
+Recovery Rate = Recovered / Confirmed
+Death Rate = Deceased / Confirmed
+
+Then ask:
+
+Which state has the best recovery rate?
+Which state has the highest death rate?
+5️⃣ Relationship Questions
+
+Examples:
+
+Does more testing detect more cases?
+Is there a relationship between testing and recovery rates?
