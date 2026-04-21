@@ -1,0 +1,51 @@
+Columns
+1. Date - Mainly used to tell what happened that day, LIke confirmed, recovered, Other, Other, and tested (It is just a day)
+2. State - Only have the data of the State name(Just some states 
+and then India)
+One thing, first the state was Kerala, then India, then Kerala, Telangana, and then India, and three states including them and India.
+
+(Doubt why Kerala first, and then Kerala, Telangana, then so on) ->
+Need to understand who got the first COVID(validate it first). and also why the change in date is irregular.
+Does it include all the states on a particular date? (Does it mean that at that time, only some states got COVID?)
+
+One thing I understood - the Indian state mainly represents the cumulative of all the states' features. 
+
+
+3. Confirm column - It is the column that tells us on the day how many people got COVID after Testing. 
+
+4. Recovered column - It is the column that tells us who all recovered from Confirmed.
+But a problem, on that particular day, the recovered ones are the ones that got confirmed before( So based on that, think and solve).
+5. Same for deceased
+6. What is the other column?
+7. Tested column - Tells us how many people are tested, but these tested people won't get confirmed on that day. So mind it( Try to solve this problem).
+
+
+Goal:
+Understand the spread, recovery, and severity of COVID-19 across Indian states over time.
+But why?
+
+(The above things, which I did all by myself. not Ai. Now try to find the next questions using AI)
+Insight 1 - There isn't any specific input and output (Used AI to find input and output)
+Insight 2 - Confirmed, Recovered, Tested are cumalative. But there is India row. where it shows the sum. (Check Data type of column soultion)
+Insight 3 - The " Tested should be changed because the India rows should be the filled with Total testcases on each rows above the India row
+Insight 4 - Active Column should be added ( Check the Relationship Point).
+Insight 5 - This is the story. People → Tested → Confirmed → Recovered / Deceased.
+Insight 6 - The tested column wouldn't be taken as the column tested today or not.
+
+Insight 7 - Use interpolation ONLY IF:
+- You convert cumulative → daily values
+- Daily values look smooth
+- Missing values are between valid points
+
+Now Metrics finding
+Absolute Metrics - Show How much and How many? 
+Ans - Total States, Total Confirmed Cases, Total Recoveries, Total Deaths, Total Tested and all
+
+Ratio Metrics - Tells How much efficient and all is the Performance of Metrics
+Compares two Quantities
+Ans - Confirm rate , Deceased Rate , Recovery Rate. First Calcualte total rate , then state rate and compare them
+(Confirm Rate hasn't been found because the test values have Null, and unordered and unorganized)
+State Metric - Try to tell Current State. (Not needed now)
+Timing Metric - Metric tells us how over time the Confirm, Death and Recovery and all change rate changes, first compare them normally and then by state.
+
+One more insight, the data is till October 2021.
