@@ -1,0 +1,110 @@
+🧠 1. The CORE Problem in Your Data
+
+👉 Your data is:
+
+Cumulative ✔
+But per state ✔
+
+That means:
+
+Each state has its own running total
+
+❌ Why normal methods fail
+Using SUM()
+SUM(covid_table[Confirmed])
+
+👉 Adds all days → double counting ❌
+
+Using MAX()
+MAX(covid_table[Confirmed])
+
+👉 Picks only one state’s highest value ❌
+
+🧠 2. What you ACTUALLY need
+
+👉 You want:
+
+“Latest total for each state → then add them”
+
+🔥 3. Understanding the Solution
+✅ This is the key formula:
+SUMX(
+    VALUES(covid_table[State]),
+    CALCULATE(MAX(covid_table[Confirmed]))
+)
+
+Let’s break it 👇
+
+🧩 4. Each Part Explained
+🔹 VALUES(covid_table[State])
+
+👉 Gives:
+
+Kerala  
+Maharashtra  
+Tamil Nadu  
+...
+
+✔ Unique list of states
+
+🔹 SUMX(...)
+
+👉 Means:
+
+“Loop through each state and sum results”
+
+🔹 Inside SUMX:
+CALCULATE(MAX(covid_table[Confirmed]))
+
+👉 For each state:
+
+CALCULATE applies filter → current state
+MAX gets latest cumulative value
+🧠 So overall:
+
+👉 For every state:
+
+Take latest confirmed
+Then add all states
+
+✔ Correct total
+
+🧠 5. Final Measures (Clean Understanding)
+🔹 Total Confirmed
+Total Confirmed =
+SUMX(
+    VALUES(covid_table[State]),
+    CALCULATE(MAX(covid_table[Confirmed]))
+)
+
+👉 Output:
+
+Total confirmed across all states (correct)
+
+🔹 Total Recovered
+Total Recovered =
+SUMX(
+    VALUES(covid_table[State]),
+    CALCULATE(MAX(covid_table[Recovered]))
+)
+🔹 Total Deaths
+Total Deaths =
+SUMX(
+    VALUES(covid_table[State]),
+    CALCULATE(MAX(covid_table[Deaths]))
+)
+🧠 6. Now KPI Measures
+🔹 Recovery Rate
+Recovery Rate =
+DIVIDE(
+    [Total Recovered],
+    [Total Confirmed],
+    BLANK()
+)
+🔹 Death Rate
+Death Rate =
+DIVIDE(
+    [Total Deaths],
+    [Total Confirmed],
+    BLANK()
+)
