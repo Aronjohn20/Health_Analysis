@@ -27,3 +27,18 @@ Like whether Time based metrics should be added as KPIS.
 
 3. Great thing to make a date table for good time series analysis.
 4. Averaging the ratios is not a good idea.
+5. Better account what all formuals used.
+6. top n failed in my monthly max calculator because
+1. Ignore Month temporarily
+2. Calculate Max Confirmed for each state over entire dataset
+3. Pick Top 3 states
+4. Show ONLY those states in ALL months.
+5. When you try to rank or take average or sum or max on values which are ratios, try to consider the percentages whose values are signicant
+
+eg
+Now ranking becomes
+State	Confirmed	Rate	Included?
+State A	10	90%	❌ ignored
+State B	100000	70%	✔ included
+
+👉 Now result is meaningful.
