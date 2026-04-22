@@ -42,3 +42,8 @@ State A	10	90%	❌ ignored
 State B	100000	70%	✔ included
 
 👉 Now result is meaningful.
+
+🔥 Rule 1
+Rates need stable data ( Shouldnt contain any outliers and all)
+🔥 Rule 2
+Filter entities, not rows ( Try to filter entities rather than single value for perfect prediction.)
