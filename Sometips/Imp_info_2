@@ -1,0 +1,29 @@
+1. When explaining about columns, Tell this is what i want to measure , so i used these kpis.
+
+Dont say I chose columns because.
+Explain it by explaining what all problems you want to solve.
+example
+“I chose recovery, confirmed, death…” NO
+“I want to understand:
+- How big is the problem?
+- How severe is it?
+- How well is it being handled?”  YES
+
+based on these we can map it.
+Then KPIs naturally become:
+
+Scale → Confirmed
+Outcome → Recovered
+Severity → Deaths
+Efficiency → Rates
+
+One problem I am facing,
+1. My Kpis can answer what is happeing
+2. But cannot answer how is it changing. 
+eg Time-based understanding ❌
+ask tthis to someone in LinkedIn
+Like whether Time based metrics should be added as KPIS.
+
+
+3. Great thing to make a date table for good time series analysis.
+4. Averaging the ratios is not a good idea.
