@@ -1,4 +1,4 @@
-**Insighc1: Ensuring Reliable Rate Comparisons**
+*Insighc1: Ensuring Reliable Rate Comparisons**
 
 To ensure meaningful comparison of recovery and death rates across states, a threshold was applied based on the total confirmed cases over the 12-month period. This is because recovery and death rates are ratio-based metrics, and their reliability depends heavily on the size of the underlying data.
 
