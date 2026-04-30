@@ -116,7 +116,7 @@ Key analysis performed:
 
 ---
 
-## 📂 Project Structure
+📂 Project Structure
 covid-state-analysis/
 │
 ├── Data/
