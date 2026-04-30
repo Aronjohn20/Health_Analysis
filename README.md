@@ -40,15 +40,10 @@ This project builds an end-to-end analytics system that:
 | Concepts Used | Aggregations, Time Series, Pattern Analysis |
 | Version Control | Git, GitHub |
 
----
 
 ## 📂 Dataset
 
-State-wise COVID dataset containing:
-
-## 📂 Dataset
-
-State-wise COVID dataset with processed daily metrics:
+ COVID dataset with processed daily metrics:
 
 | Column | Description |
 |--------|------------|
