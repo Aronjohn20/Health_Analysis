@@ -117,3 +117,23 @@ Pattern-based analysis:
 ---
 
 ## 📂 Project Structure
+covid-state-analysis/
+│
+├── SQL/
+│   ├── data_cleaning.sql
+│   ├── transformations.sql
+│   └── analysis_queries.sql
+│
+├── PowerBI/
+│   └── covid_dashboard.pbix
+│
+├── Data/
+│   └── dataset.csv
+│
+└── README.md
+
+---## 🚀 What This Project Demonstrates-
+Data transformation using SQL  - Dashboard creation in Power BI  - Insight generation from data  - Analytical thinking & pattern recognition  ---## 🎯 Key Learning- Data ≠ insight → patterns matter  - Peaks ≠ performance → consistency matters  - Rates require context for correct interpretation  ---## 🙌
+Author **Aron Varghese John**  Aspiring Data Analyst  
+---⭐ If you found this useful, consider giving a star!
+
