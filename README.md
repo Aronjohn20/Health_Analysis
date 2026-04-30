@@ -116,25 +116,23 @@ Key analysis performed:
 
 ---
 
-📂 Project Structure
+## 📂 Project Structure
+
 covid-state-analysis/
 │
 ├── Data/
-│ └── dataset.csv
+│   └── dataset.csv
 │
 ├── Data Analysis/
-| └── dataset.csv
-|
+│   └── dataset.csv
+│
 ├── SQL/
-│ ├── queries.sql
+│   └── queries.sql
 │
 ├── Dashboard/
-│ └── covid_dashboard.pbip
+│   └── covid_dashboard.pbip
 │
 └── README.md
-
-
----
 
 ## 🎯 Analytical Approach
 
