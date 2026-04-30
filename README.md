@@ -116,6 +116,7 @@ Key analysis performed:
 
 ---
 
+``` 
 ## 📂 Project Structure
 
 covid-state-analysis/
@@ -133,6 +134,8 @@ covid-state-analysis/
 │   └── covid_dashboard.pbip
 │
 └── README.md
+
+``` 
 
 ## 🎯 Analytical Approach
 
