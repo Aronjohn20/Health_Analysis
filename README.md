@@ -1,139 +1,180 @@
 # 📊 COVID-19 State-wise Analysis Dashboard
-**End-to-End Data Analytics Project | SQL + Power BI | India**
+**End-to-End Analytics Project | Public Health Data | India**
 
 ---
 
-## 📌 Overview
+## 📌 Business Problem
 
-This project analyzes COVID-19 data across Indian states to understand:
+During the COVID-19 pandemic, large volumes of covid data were generated daily. However, raw data alone does not provide actionable insights.
 
-- Case trends over time  
-- Recovery and death rate behavior  
-- State-wise performance differences  
-- Peak periods and critical months  
+Key challenges:
+- Difficulty in identifying **high-risk states**
+- Lack of clarity on **peak periods and trends**
+- No structured way to compare **state performance**
+  Spread of covid in different states over different timeline
 
-The focus is on extracting **pattern-based insights**, not just reporting numbers.
+This project aims to transform raw COVID data into **meaningful insights and patterns** for better understanding.
 
 ---
 
-## 🎯 Objectives
+## 🚀 Project Objective
 
-- Analyze confirmed, recovered, and deceased cases  
-- Identify peak months and high-impact states  
-- Compare state-wise performance  
-- Evaluate recovery and death rates over time  
-- Detect stable vs unstable state behavior  
+This project builds an end-to-end analytics system that:
+
+- Tracks **state-wise COVID trends over time**
+- Identifies **peak periods for confirmed, recovery, and death cases**
+- Compares **state performance using recovery and death rates**
+- Classifies states into **stable, unstable, strong, and weak categories**
+- Extracts **pattern-based insights instead of raw observations**
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **SQL** – Data cleaning & transformation  
-- **Power BI** – Dashboard & visualization  
-- **DAX** – Calculations & measures  
-- **Git & GitHub** – Version control  
+| Layer | Tools |
+|------|------|
+| Data Cleaning   | Python (Pandas) |
+| Data Processing | SQL |
+| Analysis | SQL, DAX |
+| Visualization | Power BI |
+| Concepts Used | Aggregations, Time Series, Pattern Analysis |
+| Version Control | Git, GitHub |
 
 ---
 
 ## 📂 Dataset
 
-- State-wise daily COVID data  
-- Key metrics:
-  - Confirmed cases  
-  - Recovered cases  
-  - Death cases  
+State-wise COVID dataset containing:
 
-### Derived Metrics:
-- Daily Confirmed / Recovered / Deceased  
+## 📂 Dataset
+
+State-wise COVID dataset with processed daily metrics:
+
+| Column | Description |
+|--------|------------|
+| Date | Daily record date |
+| State | State name |
+| Confirmed | Cumulative confirmed cases |
+| Recovered | Cumulative recovered cases |
+| Deceased | Cumulative death cases |
+| Tested | Total tests conducted |
+| positivity_rate | (Confirmed / Tested) * 100 |
+
+### Derived Metrics
+
+- Daily Confirmed Cases  
+- Daily Recovered Cases  
+- Daily Deceased Cases  
 - Recovery Rate = Recovered / Confirmed  
 - Death Rate = Deceased / Confirmed  
 
----
 
-## 🧠 Key Analysis Performed
+## 📊 Key Features
 
-### 🔹 Data Transformation
-- Converted cumulative → daily values  
-- Cleaned dataset using SQL  
-
-### 🔹 Exploratory Analysis
-- Total cases across states  
+- Peak detection (monthly max values)  
+- Trend analysis (confirmed, recovery, death)  
 - State-wise comparison  
-- Monthly aggregation  
-
-### 🔹 Peak Analysis
-- Identified maximum peaks for:
-  - Confirmed  
-  - Recovery  
-  - Death  
-
-### 🔹 Trend Analysis
-- Monthly trends for:
-  - Confirmed cases  
-  - Recovery rate  
-  - Death rate  
-
-### 🔹 State Behavior Analysis
-States were categorized into:
-- Strong  
-- Weak  
-- Unstable  
-- Neutral  
+- Recovery & death rate evaluation  
+- Pattern-based classification:
+  - Continuous behavior  
+  - Peak behavior  
+  - Mixed behavior  
+  - Neutral states  
 
 ---
 
-## 📊 Dashboard Features
+## 📈 Key Business Insights
 
-- 📈 Monthly trend analysis  
-- 📊 State-wise comparison  
-- 📉 Peak detection  
-- 📌 KPI cards (Total cases)  
-- 🎯 Recovery & death rate trends  
-
----
-
-## 🔍 Key Insights
-
-- Maharashtra dominates in confirmed, recovered, and death counts  
-- April–June is the peak period  
-- Recovery rates show high fluctuation  
-- Death rates are relatively more stable  
-- States show:
-  - Continuous behavior (stable)  
-  - Peak behavior (temporary)  
-  - Mixed behavior (unstable)  
+- Maharashtra dominates in **confirmed, recovered, and death counts** due to scale  
+- April–June represents the **critical peak period**  
+- Recovery rates show **high fluctuation across states**  
+- Death rates are relatively **more stable**  
+- States exhibit:
+  - **Continuous behavior** → stable systems  
+  - **Peak behavior** → temporary spikes  
+  - **Mixed behavior** → instability  
+  - **Neutral behavior** → no strong pattern  
 
 ---
 
-## 🧠 Analytical Approach
+## 📊 Power BI Dashboard
 
-Pattern-based analysis:
+### Key Visuals
 
-- Pattern → Identify trends  
-- Comparison → State vs state  
-- Trend → Time-based behavior  
-- Interpretation → Insight generation  
+- Monthly trend analysis  
+- State-wise comparison charts  
+- Peak detection visuals  
+- KPI cards (total confirmed, recovered, deaths)  
+- Recovery & death rate trends  
+
+---
+
+## 🧠 SQL Analysis
+
+Key analysis performed:
+
+- Data cleaning (cumulative → daily conversion)  
+- Aggregations (state & monthly level)  
+- Peak identification (MAX values)  
+- Rate calculations (recovery & death)  
+- Comparative analysis across states  
 
 ---
 
 ## 📂 Project Structure
 covid-state-analysis/
 │
-├── SQL/
-│   ├── data_cleaning.sql
-│   ├── transformations.sql
-│   └── analysis_queries.sql
-│
-├── PowerBI/
-│   └── covid_dashboard.pbix
-│
 ├── Data/
-│   └── dataset.csv
+│ └── dataset.csv
+│
+├── Data Analysis/
+| └── dataset.csv
+|
+├── SQL/
+│ ├── queries.sql
+│
+├── Dashboard/
+│ └── covid_dashboard.pbip
 │
 └── README.md
 
----## 🚀 What This Project Demonstrates-
-Data transformation using SQL  - Dashboard creation in Power BI  - Insight generation from data  - Analytical thinking & pattern recognition  ---## 🎯 Key Learning- Data ≠ insight → patterns matter  - Peaks ≠ performance → consistency matters  - Rates require context for correct interpretation  ---## 🙌
-Author **Aron Varghese John**  Aspiring Data Analyst  
----⭐ If you found this useful, consider giving a star!
 
+---
+
+## 🎯 Analytical Approach
+
+This project focuses on **pattern-based analysis**:
+
+- Pattern → Identify trends  
+- Comparison → State vs State  
+- Trend → Time-based behavior  
+- Interpretation → Insight generation  
+
+---
+
+## 🚀 What This Project Demonstrates
+
+- Data transformation using SQL  
+- Dashboard building using Power BI  
+- Strong analytical thinking  
+- Ability to extract insights from raw data  
+- Understanding of time-series and pattern analysis  
+
+---
+
+## 🎯 Key Learning
+
+- Peaks do not indicate performance → consistency matters  
+- Rates must be analyzed with context  
+- Data patterns provide deeper insights than raw values  
+
+---
+
+## 🙌 Author
+
+**Aron Varghese John**  
+Aspiring Data Analyst  
+
+---
+
+⭐ If you found this useful, consider giving a star!
