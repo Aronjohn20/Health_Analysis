@@ -1,10 +1,4 @@
--- Create cleaned table with positivity rate
-CREATE OR REPLACE TABLE covid_19_states_cleaned AS
-SELECT 
-  Date, State, Confirmed, Recovered, Deceased, Tested,
-  (Confirmed / Tested) * 100 AS positivity_rate
-FROM covid_19_states;
-
+-- Create cleaned table with positivity rat
 
 -- Create cleaned table with daily values using lag (data transformation)
 CREATE OR REPLACE TABLE covid_19_states_cleaned AS
